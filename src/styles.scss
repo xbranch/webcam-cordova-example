@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~bootstrap/scss/bootstrap";
+
 body {
   -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
   -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
@@ -8,6 +10,8 @@ body {
   margin: 0;
   /* Padding to avoid the "unsafe" areas behind notches in the screen */
   padding: unquote('env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-right, 0)');
+  width: 100vw;
+  height: 100vh;
 }
 
 * {

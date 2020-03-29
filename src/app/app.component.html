@@ -1,1 +1,26 @@
-<button (click)="snapshot()">TOOK</button>
+<div class="container">
+
+  <div class="row mt-5 mb-5">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="capture()">Took a snap</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="carousel slide">
+        <ol class="carousel-indicators">
+          <li *ngFor="let snapshot of snapshots$|async;let index=index"
+              [class.active]="(snapshot$|async)===index"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div *ngFor="let snapshot of snapshots$|async;let index=index"
+               class="carousel-item" [class.active]="(snapshot$|async)===index"
+               (swipeleft)="next()" (swiperight)="prev()">
+            <img [src]="snapshot" height="400" class="d-block w-100" alt="Snapshot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
