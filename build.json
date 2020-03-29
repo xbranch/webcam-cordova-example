@@ -1,0 +1,16 @@
+{
+  "electron": {
+    "linux": {},
+    "mac": {
+      "package": [
+        "dmg"
+      ]
+    },
+    "windows": {
+      "package": [
+        "zip",
+        "nsis"
+      ]
+    }
+  }
+}

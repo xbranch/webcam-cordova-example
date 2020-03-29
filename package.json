@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --output-path ./www --base-href ./",
+    "cordova:start:electron": " cordova run electron --nobuild",
+    "cordova:build:electron": " cordova build electron",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +23,8 @@
     "@angular/router": "~9.1.0",
     "cordova-android": "^8.1.0",
     "cordova-electron": "^1.1.1",
+    "cordova-plugin-camera": "^4.1.0",
+    "cordova-plugin-device": "^2.0.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -50,7 +54,11 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "electron",
